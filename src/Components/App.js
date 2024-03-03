@@ -19,4 +19,5 @@ const mapstateToProps = (stateFromStore) => {
   return stateFromStore; //Will import props.
 };
 
+//EXPORTS:
 export default connect(mapstateToProps, ACTIONS)(App); //Props / Reducer
