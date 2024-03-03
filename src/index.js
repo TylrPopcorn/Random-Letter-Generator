@@ -15,7 +15,6 @@ import Reducer from "./state/Reducer";
 
 //components:
 import App from "./Components/App";
-
 /*
   Dependencies:
   -----   ------
@@ -26,7 +25,6 @@ import App from "./Components/App";
   npm install npm install @reduxjs/toolkit
 
 */
-
 //.
 //vars:
 const TITLE = "LETTER GENERATOR"; /* Change the title to whatever */
