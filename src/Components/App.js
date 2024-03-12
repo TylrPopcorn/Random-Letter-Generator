@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import ACTIONS, { ACTION_TYPES } from "../state/action-creators"; //helpers
+import ACTIONS, { ACTION_TYPES } from "../../state/action-creators"; //helpers
 import generateLetter from "./generateLetter.ts";
 //----- ------  ------- ---------
 //----Main function:

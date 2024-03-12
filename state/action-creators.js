@@ -5,3 +5,8 @@ export const ACTION_TYPES = {
   //EX: Red: "RedCircle" -> Reducer name must be "RedCircle".
   LEFT: "LEFT-button",
 };
+
+//All of the action-creators used to help regulate state:
+const ACTIONS = {};
+
+export default ACTIONS; //Export by default (ACTIONS).

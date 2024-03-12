@@ -10,7 +10,7 @@ import "../styles/styles.css";
 import { configureStore, compose } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import Reducer from "./state/Reducer";
+import Reducer from "../state/Reducer";
 //--
 
 //components:
