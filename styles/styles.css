@@ -1,0 +1,12 @@
+html,
+body {
+  min-height: 100vh;
+
+  background: #181818;
+  color: #ffffff;
+
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
