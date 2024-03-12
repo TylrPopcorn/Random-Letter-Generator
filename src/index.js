@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import "../styles/reset.css";
 import "../styles/styles.css";
 //----    ----    ----
+
 //REDUCER STUFF: ---
 import { configureStore, compose } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
@@ -37,8 +38,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = configureStore({
   reducer: Reducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
-  enhancers: composeEnhancers,
+  middleware: (getDefaultMiddleware) => {
+    return [...getDefaultMiddleware(), thunk]; // Return an array of middleware
+  },
+  enhancers: [composeEnhancers],
 });
 //--
 
