@@ -1,13 +1,14 @@
 //Reducer to help regulate Articles state
 //-----
+import React, { createContext, useContext } from "react";
+
 const Functions = {}; //Any functions that help the reducer below.
-const initialData = {
-  letter: "Loading...", //the current letter generated.
-};
+const initialData = {};
 //
 //------    ---------   ----------------    ---------   ----------
 //------    ---------   ----------
-//----Main Component:
+//
+//----Main Component:------------------
 const Reducer = (state = initialData, action) => {
   switch (action.type) {
     //DEFAULT------
@@ -29,5 +30,20 @@ const Reducer = (state = initialData, action) => {
   }
 };
 
+//-----REDUX STUFF:
+const StoreContext = createContext();
+//const useStore = () => useContext(StoreContext);
+
+// Create a Provider component to wrap your app with
+const StoreProvider = ({ children }) => {
+  const [state, dispatch] = React.useReducer(Reducer, initialData);
+  return (
+    <StoreContext.Provider value={{ state, dispatch }}>
+      {children}
+    </StoreContext.Provider>
+  );
+};
+//----------------------
+
 //---Exports:
-export default Reducer;
+export default StoreProvider;
