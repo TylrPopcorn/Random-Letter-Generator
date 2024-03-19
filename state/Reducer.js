@@ -1,6 +1,5 @@
 //Reducer to help regulate Articles state
 //-----
-import React, { createContext, useContext } from "react";
 
 const Functions = {}; //Any functions that help the reducer below.
 const initialData = {};
@@ -31,19 +30,8 @@ const Reducer = (state = initialData, action) => {
 };
 
 //-----REDUX STUFF:
-const StoreContext = createContext();
-//const useStore = () => useContext(StoreContext);
 
-// Create a Provider component to wrap your app with
-const StoreProvider = ({ children }) => {
-  const [state, dispatch] = React.useReducer(Reducer, initialData);
-  return (
-    <StoreContext.Provider value={{ state, dispatch }}>
-      {children}
-    </StoreContext.Provider>
-  );
-};
 //----------------------
 
 //---Exports:
-export default StoreProvider;
+export default Reducer;

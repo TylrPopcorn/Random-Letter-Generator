@@ -6,8 +6,6 @@ import ReactDOM from "react-dom/client";
 import "../styles/reset.css";
 import "../styles/styles.css";
 //----    ----    ----
-//REDUCER
-import StoreProvider from "../state/Reducer";
 //--
 
 //components:
@@ -29,11 +27,11 @@ const TITLE = "LETTER GENERATOR"; /* Change the title to whatever */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <StoreProvider store={StoreProvider}>
+  <div>
     <h1 className="title" data-text={TITLE}>
       {TITLE}
     </h1>
     <h2> Generate a random letter </h2>
     <App />
-  </StoreProvider>
+  </div>
 );
