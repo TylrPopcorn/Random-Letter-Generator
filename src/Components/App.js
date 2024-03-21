@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
-
-import ACTIONS, { ACTION_TYPES } from "../../state/action-creators"; //helpers
+import React from "react";
 import generateLetter from "./generateLetter.ts";
 //----- ------  ------- ---------
 //----Main function:
@@ -31,10 +28,5 @@ class App extends React.Component {
   }
 }
 
-//Used for reducer:
-const mapstateToProps = (stateFromStore) => {
-  return stateFromStore; //Will import props.
-};
-
 //EXPORTS:
-export default connect(mapstateToProps, ACTIONS)(App); //Props / Reducer
+export default App;

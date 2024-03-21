@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+
+import MyContextProvider from "../state/Context";
+
 //----    ----    ----
 
 //styles:
@@ -27,11 +30,11 @@ const TITLE = "LETTER GENERATOR"; /* Change the title to whatever */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div>
+  <MyContextProvider>
     <h1 className="title" data-text={TITLE}>
       {TITLE}
     </h1>
     <h2> Generate a random letter </h2>
     <App />
-  </div>
+  </MyContextProvider>
 );
