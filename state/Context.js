@@ -1,10 +1,9 @@
 //Reducer to help regulate Articles state
 //-----
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 //----variables
-const MyContext = React.createContext();
-
+export const MyContext = React.createContext();
 const initialData = {
   currentLetter: "Loading...",
 };
@@ -24,15 +23,5 @@ const MyContextProvider = ({ children }) => {
   );
 };
 
-function Context() {
-  const { data, updateData } = useContext(MyContext);
-
-  return (
-    <div>
-      <p>Data from Context: {data}</p>
-      <button onClick={() => updateData("New value")}>Change Data</button>
-    </div>
-  );
-}
-
+//EXPORTS
 export default MyContextProvider;

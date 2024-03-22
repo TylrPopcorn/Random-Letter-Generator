@@ -1,3 +1,13 @@
+/* [VARIABLES:] */
+:root {
+  --main-text-color: rgb(173, 2, 189);
+  --text-stroke-color: rgb(255, 0, 242);
+  --text-highlight-color: rgb(247, 0, 255);
+  --text-stroke-shadow: rgb(63, 0, 0);
+
+  --width-s: 50%;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -19,6 +29,32 @@ body {
 
   margin: 0;
   padding: 0;
+}
+
+@keyframes animate {
+  /* Responsible for the highlight effect in the title */
+  0% {
+    width: 0%;
+  }
+  70%,
+  100% {
+    width: 100%;
+  }
+}
+
+#root .title::before {
+  /*CREDIT: https://www.youtube.com/watch?v=4PbgtyE0mGs */
+  content: attr(data-text);
+  position: absolute;
+  width: 0%;
+
+  color: var(--text-highlight-color);
+  text-shadow: 0px 0px 3px var(--text-highlight-color);
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  animation: animate 5s ease-in-out 2s forwards;
 }
 
 #root .title {
