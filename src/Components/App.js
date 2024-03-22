@@ -1,19 +1,23 @@
 import React from "react";
 import generateLetter from "./generateLetter.ts";
+//--
+import { MyContext } from "../../state/Context.js"; //context
 //----- ------  ------- ---------
 //----Main function:
 class App extends React.Component {
   //
   //
-
+  static contextType = MyContext;
   //--------------------------------                      --------------------------------
   //--
   //---HTML
   render() {
+    const { data, updateData } = this.context;
+
     return (
       <div id="wrapper" className="App">
         <div className="LetterArea">
-          <div className="randomLetter">{this.props.letter}</div>
+          <div className="randomLetter">{data.currentLetter}</div>
         </div>
         <div className="ButtonHolder">
           <button className="GenerateButton" onClick={generateLetter}>
