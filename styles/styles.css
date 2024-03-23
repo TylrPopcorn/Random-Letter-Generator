@@ -30,6 +30,19 @@ body {
   margin: 0;
   padding: 0;
 }
+/*-------------------------TITLE-------------------------*/
+@keyframes glowing {
+  /* Responsible for making the title glow effect*/
+  0% {
+    text-shadow: 0px 0px 18px var(--text-stroke-color);
+  }
+  50% {
+    text-shadow: 0px 0px 30px var(--text-stroke-color);
+  }
+  100% {
+    text-shadow: 0px 0px 18px var(--text-stroke-color);
+  }
+}
 
 @keyframes animate {
   /* Responsible for the highlight effect in the title */
@@ -68,4 +81,49 @@ body {
 
   margin-top: 3%;
   z-index: 2;
+}
+
+#root h2 {
+  color: var(--main-text-color);
+  margin-top: 10px;
+  font-weight: bold;
+}
+/*--*/
+
+/*-------------------------APP-------------------------*/
+.App {
+  text-align: center;
+  font-weight: bold;
+
+  padding: 2em;
+  margin: 0;
+
+  width: var(--width-s);
+  height: 100%;
+
+  box-sizing: border-box;
+}
+/*-------------------------- LETTER SQUARE ---------------------------*/
+.LetterArea {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  height: 15vw;
+  width: 70%;
+
+  background-color: hotpink;
+  /* background-color: black; */ /*for testing purposes*/
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Triangle1 {
+  border-left: 22.5vw solid transparent; /* Adjusted size */
+  border-right: 22.5vw solid transparent; /* Adjusted size */
+  border-bottom: 15vw solid rgb(212, 0, 255); /* Adjusted size and color */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

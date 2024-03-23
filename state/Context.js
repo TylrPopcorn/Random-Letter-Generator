@@ -12,12 +12,12 @@ const initialData = {
 const MyContextProvider = ({ children }) => {
   const [data, setData] = useState(initialData);
 
-  const updateData = (newValue) => {
+  const Dispatch = (newValue) => {
     setData(newValue);
   };
 
   return (
-    <MyContext.Provider value={{ data, updateData }}>
+    <MyContext.Provider value={{ data, Dispatch }}>
       {children}
     </MyContext.Provider>
   );

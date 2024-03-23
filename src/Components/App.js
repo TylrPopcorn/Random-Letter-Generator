@@ -9,18 +9,29 @@ class App extends React.Component {
   //
   static contextType = MyContext;
   //--------------------------------                      --------------------------------
+  Generate = () => {
+    //this function will generate a random letter
+    const { Dispatch } = this.context; // Get the updateData function from the context
+    console.log(this.context);
+
+    //TODO:
+    Dispatch({ currentLetter: "TEST" }); // ??
+    generateLetter(Dispatch); // ???
+  };
   //--
   //---HTML
   render() {
-    const { data, updateData } = this.context;
+    const { data } = this.context; //context data
 
     return (
       <div id="wrapper" className="App">
         <div className="LetterArea">
-          <div className="randomLetter">{data.currentLetter}</div>
+          <div className="Triangle1">
+            {/* <div className="randomLetter">{data.currentLetter}</div> */}
+          </div>
         </div>
         <div className="ButtonHolder">
-          <button className="GenerateButton" onClick={generateLetter}>
+          <button className="GenerateButton" onClick={this.Generate}>
             Generate
           </button>
         </div>
