@@ -108,7 +108,7 @@ body {
   margin-top: 10%;
   margin-bottom: 5%;
   height: 15vw;
-  width: 70%;
+  width: 40%;
 
   background-color: hotpink;
   /* background-color: black; */ /*for testing purposes*/
@@ -119,11 +119,12 @@ body {
 }
 
 .Triangle1 {
-  border-left: 22.5vw solid transparent; /* Adjusted size */
-  border-right: 22.5vw solid transparent; /* Adjusted size */
-  border-bottom: 15vw solid rgb(212, 0, 255); /* Adjusted size and color */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10vw solid transparent;
+  border-right: 10vw solid transparent;
+  border-bottom: 14vw solid red;
 }
