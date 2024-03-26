@@ -27,7 +27,13 @@ class App extends React.Component {
       <div id="wrapper" className="App">
         <div className="LetterArea">
           <div className="Triangle1">
-            {/* <div className="randomLetter">{data.currentLetter}</div> */}
+            <div className="Triangle2">
+              <div className="Triangle3">
+                <div className="Triangle4">
+                  <div className="randomLetter">{data.currentLetter}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="ButtonHolder">

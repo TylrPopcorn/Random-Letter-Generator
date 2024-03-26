@@ -5,6 +5,7 @@
   --text-highlight-color: rgb(247, 0, 255);
   --text-stroke-shadow: rgb(63, 0, 0);
 
+  --background: #181818;
   --width-s: 50%;
 }
 
@@ -12,7 +13,7 @@ html,
 body {
   min-height: 100vh;
 
-  background: #181818;
+  background: var(--background);
   color: #ffffff;
 
   /* font-family: "Courier New", Courier, monospace; */
@@ -110,7 +111,6 @@ body {
   height: 20vw;
   width: 80%;
 
-  /* background-color: hotpink; */
   /* background-color: black; */ /*for testing purposes*/
 
   display: flex;
@@ -119,6 +119,22 @@ body {
 }
 
 .Triangle1 {
+  display: inline-block;
+  width: 150px;
+  color: orange;
+  filter: url("#goo");
+}
+
+.triangle::before {
+  content: "";
+  display: block;
+  padding-top: 86%;
+  background: currentColor;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+/* 
+.Triangle1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -126,5 +142,83 @@ body {
   height: 0;
   border-left: 18vw solid transparent;
   border-right: 18vw solid transparent;
-  border-bottom: 20vw solid red;
+  border-bottom: 20vw solid var(--text-highlight-color);
+} */
+
+/* .Triangle2 {
+  margin-top: 1vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14.8vw solid transparent;
+  border-right: 15vw solid transparent;
+  border-bottom: 18vw solid var(--background);
+}
+
+.Triangle3 {
+  margin-top: 1vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12vw solid transparent;
+  border-right: 12vw solid transparent;
+  border-bottom: 16vw solid var(--main-text-color);
+}
+
+.Triangle4 {
+  margin-top: 4vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8vw solid transparent;
+  border-right: 8vw solid transparent;
+  border-bottom: 10vw solid var(--background);
+
+  justify-content: center;
+} */
+
+.randomLetter {
+  font-size: 8vh;
+  opacity: 0;
+  /* transition: opacity 0.5s ease; */
+  text-shadow: 1px 1px 2px var(--main-text-color); /* Adjust the values as needed */
+}
+
+/*-------------------------GENERATE BUTTON-------------------------*/
+.ButtonHolder {
+  border-radius: 10px;
+
+  height: 6vh;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.GenerateButton {
+  height: 70%;
+  width: 80%;
+
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+
+  border-radius: 2px;
+  background-color: #2f3030;
+  -webkit-text-stroke: 0.3px black;
+
+  box-shadow: 0 0 0 var(--main-text-color);
+  transition: box-shadow 0.1s ease;
+
+  overflow: hidden;
+  z-index: 2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
