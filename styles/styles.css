@@ -105,12 +105,12 @@ body {
 }
 /*-------------------------- LETTER SQUARE ---------------------------*/
 .LetterArea {
-  margin-top: 10%;
+  margin-top: 8%;
   margin-bottom: 5%;
-  height: 15vw;
-  width: 40%;
+  height: 20vw;
+  width: 80%;
 
-  background-color: hotpink;
+  /* background-color: hotpink; */
   /* background-color: black; */ /*for testing purposes*/
 
   display: flex;
@@ -124,7 +124,7 @@ body {
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 10vw solid transparent;
-  border-right: 10vw solid transparent;
-  border-bottom: 14vw solid red;
+  border-left: 18vw solid transparent;
+  border-right: 18vw solid transparent;
+  border-bottom: 20vw solid red;
 }
