@@ -104,12 +104,12 @@ body {
 
   box-sizing: border-box;
 }
-/*-------------------------- LETTER SQUARE ---------------------------*/
+/*-------------------------- LETTER TRIANGLE? ---------------------------*/
 .LetterArea {
-  margin-top: 8%;
-  margin-bottom: 5%;
-  height: 20vw;
-  width: 80%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  height: 22vw;
+  width: 75%;
 
   /* background-color: black; */ /*for testing purposes*/
 
@@ -119,69 +119,51 @@ body {
 }
 
 .Triangle1 {
-  display: inline-block;
-  width: 150px;
-  color: orange;
-  filter: url("#goo");
-}
-
-.triangle::before {
-  content: "";
-  display: block;
-  padding-top: 86%;
-  background: currentColor;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
-/* 
-.Triangle1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
+  width: 90%;
+  height: 90%;
   border-left: 18vw solid transparent;
   border-right: 18vw solid transparent;
-  border-bottom: 20vw solid var(--text-highlight-color);
-} */
+  border-bottom: 20vw solid var(--text-highlight-color); /* Change this to the background color of your shape */
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.7)); /* Glow effect */
 
-/* .Triangle2 {
-  margin-top: 1vw;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 14.8vw solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Triangle2 {
+  position: absolute; /* Position the child div absolutely */
+  top: 2vw;
+  /* left: 3%; */
+
+  /* width: 80%;
+  height: 80%; */
+  border-left: 15vw solid transparent;
   border-right: 15vw solid transparent;
-  border-bottom: 18vw solid var(--background);
+  border-bottom: 17vw solid black; /* Change this to the background color of your shape */
+  filter: drop-shadow(
+    0 0 20px rgba(255, 255, 255, 0.9)
+  ); /* Glow effect for the inner triangle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Triangle3 {
-  margin-top: 1vw;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 12vw solid transparent;
-  border-right: 12vw solid transparent;
-  border-bottom: 16vw solid var(--main-text-color);
-}
+  position: absolute; /* Position the child div absolutely */
+  top: 0.28vw;
+  /* left: 3%; */
 
-.Triangle4 {
-  margin-top: 4vw;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8vw solid transparent;
-  border-right: 8vw solid transparent;
-  border-bottom: 10vw solid var(--background);
-
+  /* width: 80%;
+  height: 80%; */
+  border-left: 14.5vw solid transparent;
+  border-right: 14.5vw solid transparent;
+  border-bottom: 16.5vw solid var(--background); /* Change this to the background color of your shape */
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9));
+  display: flex;
   justify-content: center;
-} */
+  align-items: center;
+}
 
 .randomLetter {
   font-size: 8vh;
@@ -221,4 +203,13 @@ body {
   z-index: 2;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/*-------------------------BOTTOM FRAME-------------------------*/
+.BottomFrame {
+  position: relative;
+  margin-top: 0.5em;
+  color: var(--main-text-color);
+  font-weight: normal;
+  font-style: italic;
 }
