@@ -5,8 +5,7 @@ import React, { useState } from "react";
 //----variables
 export const MyContext = React.createContext();
 const initialData = {
-  // currentLetter: "Loading...",
-  currentLetter: "B",
+  currentLetter: "",
 };
 
 //--------FUNCTIONS:
