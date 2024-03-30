@@ -1,22 +1,32 @@
 import React from "react";
 import generateLetter from "./generateLetter.ts";
+import wait from "./wait.ts";
 //--
 import { MyContext } from "../../state/Context.js"; //context
 //----- ------  ------- ---------
 //----Main function:
 class App extends React.Component {
-  //
-  //
   static contextType = MyContext;
+  //
+  //
+  constructor(props) {
+    super(props); //Allow access to 'this.props'
+    this.generateRunning = false;
+  }
   //--------------------------------                      --------------------------------
   Generate = () => {
     //this function will generate a random letter
-    const { Dispatch } = this.context; // Get the updateData function from the context
-    console.log(this.context);
+    if (this.generateRunning === false) {
+      this.generateRunning = true;
+      const { Dispatch } = this.context; // Get the updateData function from the context
 
-    //TODO:
-    Dispatch({ currentLetter: "TEST" }); // ??
-    generateLetter(Dispatch); // ???
+      const letterGenerated = generateLetter(); // ???
+      Dispatch({ currentLetter: letterGenerated });
+
+      wait(1800).then(() => {
+        this.generateRunning = false;
+      });
+    }
   };
   //--
   //---HTML

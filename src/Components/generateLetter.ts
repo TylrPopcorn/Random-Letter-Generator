@@ -1,8 +1,5 @@
 //This file will generate a random letter to be shown on screen
 //------------------------------------------------------------------------
-//(IMPORTED) functions:
-import wait from "./wait.ts";
-
 //VARIABLES:
 let letterGenerated: string; // eslint-disable-line
 
@@ -14,21 +11,14 @@ const letters: string[] = [
 
 //------------------------------------------                -----------------------------------------------
 //----------MAIN / START:
-let generateRunning: boolean = false; //Debounce for generating letters.
-function generateLetter(): void {
+function generateLetter(): string {
   //console.log("generating letter")
 
-  if (generateRunning === false) {
-    generateRunning = true;
+  //Get a random letter from the 'letters' table:
+  const randomIndex = Math.floor(Math.random() * letters.length);
+  letterGenerated = letters[randomIndex].toUpperCase();
 
-    //Get a random letter from the 'letters' table:
-    const randomIndex = Math.floor(Math.random() * letters.length);
-    letterGenerated = letters[randomIndex].toUpperCase();
-
-    wait(1800).then(() => {
-      generateRunning = false;
-    });
-  }
+  return letterGenerated;
 }
 
 //---EXPORTS:
