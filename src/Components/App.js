@@ -11,20 +11,35 @@ class App extends React.Component {
   //
   constructor(props) {
     super(props); //Allow access to 'this.props'
-    this.generateRunning = false;
+    this.generateRunning = false; //debounce used for letter generation process
   }
   //--------------------------------                      --------------------------------
   Generate = () => {
     //this function will generate a random letter
+    //----------------
+    const letterBox = document.querySelector(".randomLetter");
+    const triangle = document.querySelector(".Triangle1");
+
     if (this.generateRunning === false) {
+      //IF debounce is false THEN
       this.generateRunning = true;
       const { Dispatch } = this.context; // Get the updateData function from the context
 
       const letterGenerated = generateLetter(); // ???
       Dispatch({ currentLetter: letterGenerated });
 
-      wait(1800).then(() => {
-        this.generateRunning = false;
+      letterBox.classList.add("fade");
+      triangle.classList.add("shine");
+
+      //wait some time:
+      wait(1300).then(() => {
+        letterBox.classList.remove("fade");
+        triangle.classList.remove("shine");
+
+        wait(500).then(() => {
+          this.generateRunning = false; //disable debounce
+        });
+        //[NOTE]: By adding another wait at the end of this wait, we can give the function a little bit of time at the end to sit beofre running the function again.
       });
     }
   };
@@ -57,5 +72,5 @@ class App extends React.Component {
   }
 }
 
-//EXPORTS:
+//EXPORTS:----------
 export default App;
