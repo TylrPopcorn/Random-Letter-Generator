@@ -29,14 +29,14 @@ class App extends React.Component {
       Dispatch({ currentLetter: letterGenerated });
 
       letterBox.classList.add("fade");
-      triangle.classList.add("shine");
+      triangle.classList.add("shine"); //TODO: Make shine work IN CSS!!!!!
 
       //wait some time:
-      wait(1300).then(() => {
+      wait(1000).then(() => {
         letterBox.classList.remove("fade");
         triangle.classList.remove("shine");
 
-        wait(500).then(() => {
+        wait(400).then(() => {
           this.generateRunning = false; //disable debounce
         });
         //[NOTE]: By adding another wait at the end of this wait, we can give the function a little bit of time at the end to sit beofre running the function again.

@@ -1,14 +1,15 @@
 /* [VARIABLES:] */
 :root {
-  --main-text-color: rgb(173, 2, 189);
-  --text-stroke-color: rgb(255, 0, 242);
-  --text-highlight-color: rgb(247, 0, 255);
-  --text-stroke-shadow: rgb(63, 0, 0);
+  --main-text-color: rgb(189, 2, 189);
+  --text-stroke-color: rgb(255, 0, 200);
+  --text-highlight-color: rgb(255, 0, 242);
+  --text-stroke-shadow: rgb(56, 0, 63);
 
   --background: #181818;
   --width-s: 50%;
 }
 
+/*--HTML--*/
 html,
 body {
   min-height: 100vh;
@@ -104,27 +105,30 @@ body {
 
   box-sizing: border-box;
 }
-/*-------------------------- LETTER TRIANGLE? ---------------------------*/
+/*-------------------------- LETTER TRIANGLE ---------------------------*/
 .LetterArea {
   margin-top: 1%;
   margin-bottom: 3%;
   height: 22vw;
   width: 75%;
 
-  /* background-color: black; */ /*for testing purposes*/
+  /* background-color: black; */ /*for testing purposes */
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*----triangle1----*/
 .Triangle1 {
   width: 90%;
   height: 90%;
   border-left: 18vw solid transparent;
   border-right: 18vw solid transparent;
-  border-bottom: 20vw solid var(--text-highlight-color); /* Change this to the background color of your shape */
+  border-bottom: 20vw solid var(--text-highlight-color);
+
   filter: drop-shadow(0 0 12px var(--text-highlight-color)); /* Glow effect */
+  transition: filter 0.7s ease;
 
   display: flex;
   justify-content: center;
@@ -132,40 +136,44 @@ body {
   position: relative;
 }
 
+.Triangle1.shine {
+  filter: drop-shadow(0 0 1.2vw var(--text-highlight-color));
+}
+
+/*----triangle2----*/
 .Triangle2 {
   position: absolute; /* Position the child div absolutely */
   top: 2vw;
-  /* left: 3%; */
 
-  /* width: 80%;
-  height: 80%; */
   border-left: 15vw solid transparent;
   border-right: 15vw solid transparent;
-  border-bottom: 17vw solid black; /* Change this to the background color of your shape */
-  filter: drop-shadow(
-    0 0 10px rgba(0, 0, 0, 0.7)
-  ); /* Glow effect for the inner triangle */
+  border-bottom: 17vw solid black;
+
+  /* Glow effect for the inner triangle */
+  filter: drop-shadow(0px 2px 10px rgb(0, 0, 0, 0.5));
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*----triangle3----*/
 .Triangle3 {
   position: absolute; /* Position the child div absolutely */
   top: 0.28vw;
-  /* left: 3%; */
 
-  /* width: 80%;
-  height: 80%; */
   border-left: 14.5vw solid transparent;
   border-right: 14.5vw solid transparent;
-  border-bottom: 16.5vw solid var(--background); /* Change this to the background color of your shape */
+  border-bottom: 16.5vw solid var(--background);
+
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9));
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*----Letter----*/
 .randomLetter {
   position: absolute;
   font-size: 18vh;
@@ -173,7 +181,7 @@ body {
   margin-top: 20vw;
   opacity: 0;
   transition: opacity 0.5s ease;
-  text-shadow: 1px 1px 20px var(--main-text-color); /* Adjust the values as needed */
+  text-shadow: 1px 1px 20px var(--main-text-color);
 
   z-index: 3;
 }
