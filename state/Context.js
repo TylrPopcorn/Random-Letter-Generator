@@ -1,5 +1,5 @@
 //Reducer to help regulate state
-//-----
+//----
 import React, { useState } from "react";
 
 //----variables

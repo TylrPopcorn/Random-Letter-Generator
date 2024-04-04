@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import MyContextProvider from "../state/Context";
 
-//----    ----    ----
+//----    ----    -----
 
 //styles:
 import "../styles/reset.css";
