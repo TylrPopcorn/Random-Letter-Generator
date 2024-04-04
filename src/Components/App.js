@@ -25,11 +25,11 @@ class App extends React.Component {
       this.generateRunning = true;
       const { Dispatch } = this.context; // Get the updateData function from the context
 
-      const letterGenerated = generateLetter(); // ???
+      const letterGenerated = generateLetter();
       Dispatch({ currentLetter: letterGenerated });
 
       letterBox.classList.add("fade");
-      triangle.classList.add("shine"); //TODO: Make shine work IN CSS!!!!!
+      triangle.classList.add("shine");
 
       //wait some time:
       wait(1000).then(() => {
