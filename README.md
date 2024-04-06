@@ -16,3 +16,7 @@ Click the 'Generate' button to generate a random letter
 - [ ] Run `npm install` to install your dependencies.
 - [ ] Run `npm run start` to start the application.
 <br>
+
+
+https://github.com/TylrPopcorn/Random-Letter-Generator/assets/104395322/0b7d4f5a-1362-49bd-b8b4-82fc3a991e06
+
