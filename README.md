@@ -1,9 +1,9 @@
-# Random-Letter-Generator
+#  ```Random-Letter-Generator```
 
-A simple application that will generate a random letter when a button is clicked on.
+ ``` A simple application that will generate a random letter when a button is clicked on.  ```
+ 
+<sup>*Developed using **HTML, React, JavaScript, CSS, Node, and TypeScript***</sup>
 
-
-![image](https://github.com/TylrPopcorn/Random-Letter-Generator/assets/104395322/269fe7f5-faba-4565-b574-36b68610e510)
 
 
 <br>
@@ -17,6 +17,7 @@ Click the 'Generate' button to generate a random letter
 - [ ] Run `npm run start` to start the application.
 <br>
 
+![image](https://github.com/TylrPopcorn/Random-Letter-Generator/assets/104395322/269fe7f5-faba-4565-b574-36b68610e510)
 
 https://github.com/TylrPopcorn/Random-Letter-Generator/assets/104395322/0b7d4f5a-1362-49bd-b8b4-82fc3a991e06
 
