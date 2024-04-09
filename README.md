@@ -5,7 +5,7 @@
  ## Overview
 <sup>*Developed using **HTML, React, JavaScript, CSS, Node, and TypeScript***</sup>
 
-The application's **HTML** serves as its backbone, providing a foundational structure that outlines its layout and essential components. Utilizing **React**, we've crafted an interactive and dynamic user experience, allowing seamless navigation and functionality. JavaScript underpins the system, managing the core logic that drives the application's operations and behavior. Our **CSS** enhancements not only refine the application's aesthetics but also ensure its responsiveness across various devices, delivering an engaging and user-friendly interface. Additionally, **Context** is deployed to efficiently manage and control the state throughout the entire project, enhancing data flow and component reusability.
+The application's **HTML** serves as its backbone, providing a foundational structure that outlines its layout and essential components. Utilizing **React**, we've crafted an interactive and dynamic user experience, allowing seamless navigation and functionality. **JavaScript** underpins the system, managing the core logic that drives the application's operations and behavior. Our **CSS** enhancements not only refine the application's aesthetics but also ensure its responsiveness across various devices, delivering an engaging and user-friendly interface. Additionally, **Context** is deployed to efficiently manage and control the state throughout the entire project, enhancing data flow and component reusability.
 
 - **HTML:** Established the foundational structure of the application, outlining its layout and key components.
 - **React:** Leveraged React to develop the application's interactive and dynamic functionality.
