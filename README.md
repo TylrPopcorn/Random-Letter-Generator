@@ -33,5 +33,6 @@ https://github.com/TylrPopcorn/Random-Letter-Generator/assets/104395322/0b7d4f5a
 # Related Projects
 -  [Random Number Generator](https://github.com/TylrPopcorn/Random-Number-Generator) - *Generate a random number*
 -  [Random Word Generator](https://github.com/TylrPopcorn/Random-Word-Generator) - *Generate a random word*
+-  [Projects List](https://github.com/TylrPopcorn/Projects-List) - *Explore other projects I have worked on*
 
 
